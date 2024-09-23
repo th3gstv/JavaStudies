@@ -11,17 +11,28 @@ public class IfAndElse {
         String nome = "Sasuke Uchiha";
         String rank;
 
-        int idade = 12;
-        boolean Hokage = false;
-        short numeroDeMissoes = 24;
+        int idade = 16;
+        short numeroDeMissoes = 14;
 
 
+        //Com IF and Else
+        /*
         if (numeroDeMissoes >= 10 && idade > 15) {
             System.out.println("Graduação: Chunnin");
         } else if (numeroDeMissoes >=20) {
             System.out.println("Graduação: Jounnin");
         }else {
             System.out.println("Graduação: Gennin");
-        }
+        } */
+
+        //Com ternários
+        String graduacao = (numeroDeMissoes >= 20) ? "Graduação: Jounnin" :
+                (numeroDeMissoes >= 10 && idade > 15) ? "Graduação: Chunnin": "Graduação: Gennin";
+
+
+        System.out.println(graduacao);
+
+
+
     }
 }
