@@ -16,10 +16,22 @@ public class Array {
          ninja[3] = "Kakashi Hatake";
          ninja[4] = "Rock Lee";
 
-         //Array idade
-        int[] idade = new int[5];
+         //Redeclarando o array
+        ninja = new String[7];
+        ninja[0] = "Hashirama Senju";
+        ninja[1] = "Tobirama Senju";
+        ninja[2] = "Hiruzen Sarutobi";
+        ninja[3] = "Minato Namikaze";
+        ninja[4] = "Tsunade Senju";
+        ninja[5] = "Kakashi Hatake";
+        ninja[6] = "Naruto Uzumaki";
+        System.out.println(ninja[5]);
+        //System.out.println(ninja); //Garbage Collection
 
-        System.out.println(ninja);
+        //LOOP para recorrer ao away
+        for (int i = 0; i < 7; i++) {
+            System.out.println(ninja[i]);
+        }
         scanner.close();
     }
 }
