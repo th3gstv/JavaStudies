@@ -3,36 +3,71 @@ import java.util.Scanner;
 
 public class Desafio02Cadastro {
     public static void main(String[] args) {
-        Scanner caixaDeTexto = new Scanner(System.in);
+        //Criação do Scanner
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("\n==== Menu Ninja ====");
-        System.out.println("1. Cadastrar Ninja");
-        System.out.println("2. Listar Ninjas");
-        System.out.println("3. Sair");
-        System.out.println("Escolha uma opção: ");
+        //Criação do Array
+        int numeroMaximo = 5;
+        String[] ninjas = new String[numeroMaximo];
 
-        //Criação do array
-        String[] ninja = new String[0];
+        //Contadores
+        int ninjasCadastrados = 0;
+        int opcao = 0;
 
-        //Escolhendo a opção
-        int escolhaMenu = caixaDeTexto.nextInt();
-        String nomeDoNinja = caixaDeTexto.nextLine();
+        while (opcao != 4) {
+            //Menu
+            System.out.println("\n===== Menu Ninja =====");
+            System.out.println("1. Cadastrar Ninja");
+            System.out.println("2. Listar Ninjas");
+            System.out.println("3. Deletar Ninja");
+            System.out.println("4. Sair");
+            System.out.print("Escolha uma opção: ");
+            opcao = scanner.nextInt();
+            scanner.nextLine();
 
-       switch (escolhaMenu){
-           case 2:
-               System.out.println("Aqui estão os ninjas cadastrados atualmente: ");
-               break;
-           case 3:
-               System.out.println("Você está deixando o sistema de cadastro. Até logo!");
-       }
-
-       if (escolhaMenu == 1){
-               System.out.println("Você escolheu criar um ninja!");
-               //Criação do Ninja
-               System.out.println("Nome do ninja: " +nomeDoNinja);
-       }
-
-
-        caixaDeTexto.close();
+            switch (opcao) {
+                case 1:
+                    if (ninjasCadastrados < numeroMaximo) {
+                        System.out.println("Digite o nome do ninja: ");
+                        String nomeDoNinja = scanner.nextLine();
+                        ninjas[ninjasCadastrados] = nomeDoNinja;
+                        ninjasCadastrados++;
+                        System.out.println("Ninja cadastrado com sucesso!");
+                    } else {
+                        System.out.println("O limite de ninjas já foi excedido! Não foi possível cadastrar esse ninja");
+                    }
+                    break;
+                case 2:
+                    if (ninjasCadastrados == 0) {
+                        System.out.println("Nenhum ninja encontrado.");
+                    } else {
+                        System.out.println("========== Lista de Ninjas ==========");
+                        for (int i = 0; i < ninjasCadastrados; i++) {
+                            System.out.println(ninjas[i]);
+                        }
+                    }
+                    break;
+                case 3:
+                    System.out.println("Digite o número do ninja que deseja remover: ");
+                    int indexParaRemover = scanner.nextInt() - 1;
+                    if (indexParaRemover >= 0 && indexParaRemover < ninjasCadastrados){
+                        for (int i = indexParaRemover; i < ninjasCadastrados - 1; i++) {
+                            ninjas[i] = ninjas[i + 1];
+                        }
+                        ninjas[ninjasCadastrados - 1] = null;
+                        ninjasCadastrados--;
+                        System.out.println("Ninja removido com sucesso!");
+                    }else{
+                        System.out.println("Número inválido! Tente novamente.");
+                    }
+                    break;
+                case 4:
+                    System.out.println("Você está deixando a área de cadastro, até logo!");
+                    break;
+                default:
+                    System.out.println("Selecione uma opção válida!");
+                    break;
+            }
+        }
     }
 }
