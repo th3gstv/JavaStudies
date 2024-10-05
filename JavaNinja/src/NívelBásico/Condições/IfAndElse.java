@@ -1,10 +1,10 @@
-package Condições;
+package NívelBásico.Condições;
 
 public class IfAndElse {
     public static void main(String[] args) {
 
         /*
-        IF e ELSE - Condições
+        IF e ELSE - Básico.Condições
         Objetivo: Passar o ninja de nível de acordo com o número de missões
          */
 

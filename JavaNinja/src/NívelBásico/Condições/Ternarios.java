@@ -1,4 +1,4 @@
-package Condições;
+package NívelBásico.Condições;
 
 public class Ternarios {
     public static void main(String[] args) {

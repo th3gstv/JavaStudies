@@ -1,4 +1,4 @@
-package Condições;
+package NívelBásico.Condições;
 
 public class LaçosDoWhile {
     public static void main(String[] args) {

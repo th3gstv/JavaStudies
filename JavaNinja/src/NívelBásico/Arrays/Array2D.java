@@ -1,4 +1,4 @@
-package Básico;
+package NívelBásico.Arrays;
 
 public class Array2D {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Básico;
+package NívelBásico;
 import java.util.Scanner;
 
 public class Rascunho {

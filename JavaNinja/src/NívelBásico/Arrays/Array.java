@@ -1,4 +1,4 @@
-package Básico;
+package NívelBásico.Arrays;
 import java.util.Scanner;
 
 public class Array {
