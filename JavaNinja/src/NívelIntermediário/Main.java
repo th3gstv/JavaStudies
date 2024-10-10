@@ -8,6 +8,7 @@ public class Main {
         Naruto.aldeia = "Konohagakure";
         Naruto.idade = 17;
         Naruto.ModeSennin();
+        Naruto.habilidadeEspecial();
 
         //Objeto 2
         Uchiha Sasuke = new Uchiha();
@@ -15,6 +16,7 @@ public class Main {
         Sasuke.aldeia = "Konohagakure";
         Sasuke.idade = 18;
         Sasuke.SharinganAtivado();
+        Sasuke.habilidadeEspecial();
 
         //Objeto 3
         Haruno Sakura = new Haruno();
@@ -28,6 +30,20 @@ public class Main {
         Hinata.nome = "Hinata Hyuuga";
         Hinata.aldeia = "Konohagakure";
         Hinata.idade = 16;
-        Hinata.Byakugan();
+        Hinata.ByakuganAtivado();
+
+        //Objeto 5
+        Boruto Boruto = new Boruto();
+        Boruto.nome = "Boruto Uzumaki";
+        Boruto.aldeia = "Konohagakure";
+        Boruto.idade = 9;
+        Boruto.AtivarJougan();
+        Boruto.AtivarOKarma();
+
+        //Objeto 6
+        Hokages Hashirama = new Hokages("Hashirama", 40, false, 1.8, 0, 0);
+
+        Missoes missao1 = new Missoes("Resgatar os cidadãos", RankDeMissoes.B);
+        missao1.exibirDetalhes();
     }
 }
