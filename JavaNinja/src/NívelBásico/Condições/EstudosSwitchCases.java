@@ -1,5 +1,4 @@
 package NívelBásico.Condições;
-
 import java.util.Scanner;
 
 public class EstudosSwitchCases {

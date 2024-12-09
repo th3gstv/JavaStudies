@@ -41,9 +41,15 @@ public class Main {
         Boruto.AtivarOKarma();
 
         //Objeto 6
-        Hokages Hashirama = new Hokages("Hashirama", 40, false, 1.8, 0, 0);
+        Senju Hashirama = new Senju();
+        Hashirama.nome = "Hashirama Senju";
+        Hashirama.idade = 45;
 
         Missoes missao1 = new Missoes("Resgatar os cidadãos", RankDeMissoes.B);
         missao1.exibirDetalhes();
+        Hashirama.sabedoriaHokage();
+
+        //Objeto 7
+
     }
 }

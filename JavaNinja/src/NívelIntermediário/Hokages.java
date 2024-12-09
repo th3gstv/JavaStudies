@@ -1,12 +1,14 @@
 package NívelIntermediário;
 
-public class Hokages{
+public abstract class Hokages{
     String nome;
     int idade;
     boolean vivoOuNao;
     double altura;
     int missoes;
     double saldoBancario;
+
+    public abstract void sabedoriaHokage();
 
 
     public Hokages() {

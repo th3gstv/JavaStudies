@@ -15,15 +15,15 @@ public class Desafio01 {
         System.out.println("Missão: " + missaoN1);
         System.out.println("Rank da Missão: " + rankMissaoN1);
 
-        if (rankMissaoN1 == 'D' && idadeN1 < 15){
+        if(idadeN1 < 15){
+            if (rankMissaoN1 == 'D' || rankMissaoN1 == 'C'){
             System.out.println("Status da Missão: Concluída");
-        }else if (rankMissaoN1 == 'C' && idadeN1 < 15){
-            System.out.println("Status da Missão: Concluída");
-        }else if(idadeN1 >= 15) {
-            System.out.println("Status da Missão: Concluída");
-        }else {
+            }else {
+            System.out.println("Status da Missão: Não concluída, idade insuficiente");
+            }
+        } else {
             System.out.println("Status da Missão: Não concluída");
-        }
+            }
 
         System.out.println("--------------");
 
@@ -44,7 +44,7 @@ public class Desafio01 {
             if (rankMissaoN2 == 'D' || rankMissaoN2 == 'C'){
                 System.out.println("Status da Missão: Concluída");
             }else {
-                System.out.println("Status da Missão: Não concluída (Idade insufisciente)");
+                System.out.println("Status da Missão: Não concluída (Idade insuficiente)");
             }
         }else {
             System.out.println("Status da Missão: Concluída");
